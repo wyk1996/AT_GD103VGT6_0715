@@ -1,0 +1,540 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ��Vision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: huiyu HZHY, 123, LIC=QF82M-X4PKY-AR8XW-Q0N9K-VVYYC-BS1J2
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
+Toolchain Path:  D:\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.38.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+E:\360MoveData\Users\HZHY\Desktop\AC1g-DA\gd32f103vgt6_231106-1439\bsp\gd32103vgt6\project.uvprojx
+Project File Date:  11/06/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil\ARM\ARMCC\Bin'
+Rebuild target 'rt-thread_gd32f103'
+compiling HYFrame.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+4G\HYFrame.c(680): warning:  #177-D: variable "Sendbuf"  was declared but never referenced
+      uint8_t Sendbuf[200] = {0};
+4G\HYFrame.c(978): warning:  #223-D: function "time" declared implicitly
+          SendHYCmd104[GUN_A].charged_sec = time(RT_NULL) - stChTcb.stCh.timestart;//充电时间 �?
+4G\HYFrame.c(1071): warning:  #940-D: missing return statement at end of non-void function "HY_SendDevStateB" 
+  }
+4G\HYFrame.c(1159): warning:  #223-D: function "time" declared implicitly
+          pbill->charge_time = time(RT_NULL) - stChTcb.stCh.timestart;			//充电时间长度  单位�?
+4G\HYFrame.c(1086): warning:  #177-D: variable "errcode"  was declared but never referenced
+      uint8_t errcode,i;			//故障�?
+4G\HYFrame.c(1086): warning:  #177-D: variable "i"  was declared but never referenced
+      uint8_t errcode,i;			//故障�?
+4G\HYFrame.c(1198): warning:  #177-D: variable "errcode"  was declared but never referenced
+      uint8_t errcode,i;			//故障�?
+4G\HYFrame.c(1198): warning:  #177-D: variable "i"  was declared but never referenced
+      uint8_t errcode,i;			//故障�?
+4G\HYFrame.c(1428): warning:  #177-D: variable "gun"  was declared but never referenced
+      uint8_t gun;
+4G\HYFrame.c(1512): warning:  #177-D: variable "times"  was declared but never referenced
+      uint8_t times = 3;							//如果设置失败反复设置三次
+4G\HYFrame.c(1563): warning:  #188-D: enumerated type mixed with another type
+      WriterFmBill(gun,0);
+compiling main.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+applications\main.c: 3 warnings, 0 errors
+compiling 4GSend.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+4G\4GSend.c(102): warning:  #188-D: enumerated type mixed with another type
+                              WriterFmBill(stMsg.uiMsgVar,1);
+4G\4GSend.c(114): warning:  #188-D: enumerated type mixed with another type
+                                  PreAPOffLineBill(stMsg.uiMsgVar,OFFlineBuf); 		//读取离线交易记录
+4G\4GSend.c(115): warning:  #188-D: enumerated type mixed with another type
+                                  PreAPFSOffLineBill(stMsg.uiMsgVar,OFFFSlineBuf);		//离线分时交易记录
+4G\4GSend.c(138): warning:  #188-D: enumerated type mixed with another type
+                  _4G_SendDevState(stMsg.uiMsgVar);			//发送设备状�?
+4G\4GSend.c(190): warning:  #188-D: enumerated type mixed with another type
+                  _4G_SendCardVinCharge(stMsg.uiMsgVar);   //刷卡启动上报
+4G\4GSend.c(193): warning:  #188-D: enumerated type mixed with another type
+                  _4G_SendCardInfo(stMsg.uiMsgVar);
+4G\4GSend.c(197): warning:  #188-D: enumerated type mixed with another type
+                  _4G_SendVinInfo(stMsg.uiMsgVar);
+4G\4GSend.c(288): warning:  #188-D: enumerated type mixed with another type
+                          ReSendBill(i,pBillGunA,0);
+4G\4GSend.c(293): warning:  #188-D: enumerated type mixed with another type
+                          ReSendBill(i,pBillGunB,0);
+compiling gd32f10x_it.c...
+compiling YKCFrame.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+compiling 4GMain.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+4G\4GMain.c(285): warning:  #111-D: statement is unreachable
+      return RT_TRUE;
+4G\4GMain.c(315): warning:  #111-D: statement is unreachable
+      return NULL;
+4G\4GMain.c(344): warning:  #111-D: statement is unreachable
+      return 0;
+4G\4GMain.c(608): warning:  #111-D: statement is unreachable
+      return _4G_APP_START;
+4G\4GMain.c(762): warning:  #1215-D: #warning directive: "互斥需要测�?
+  #warning "互斥需要测�?"
+4G\4GMain.c(768): warning:  #940-D: missing return statement at end of non-void function "UART_4GWrite" 
+  }
+4G\4GMain.c(899): warning:  #177-D: variable "err"  was declared but never referenced
+      uint8_t err;
+4G\4GMain.c(32): warning:  #177-D: variable "GPRSMAINOSQ"  was declared but never referenced
+  static void *GPRSMAINOSQ[GPRSMAIN_Q_LEN];					// 消息队列
+compiling ModuleA7680C.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+4G\ModuleA7680C.c(297): warning:  #1215-D: #warning directive: "校验   YXY 20220531"
+  #warning "校验   YXY 20220531"
+4G\ModuleA7680C.c(298): warning:  #1215-D: #warning directive: "存储   YXY 20220531"
+  #warning "存储   YXY 20220531"
+4G\ModuleA7680C.c(317): warning:  #1215-D: #warning directive: "校验   YXY 20220531"
+  #warning "校验   YXY 20220531"
+4G\ModuleA7680C.c(318): warning:  #1215-D: #warning directive: "存储   YXY 20220531"
+  #warning "存储   YXY 20220531"
+4G\ModuleA7680C.c(540): warning:  #940-D: missing return statement at end of non-void function "APP_SetAppRegisterState" 
+  }
+4G\ModuleA7680C.c(1728): warning:  #513-D: a value of type "uint8_t *" cannot be assigned to an entity of type "char *"
+      poffset = pdata + 14;
+4G\ModuleA7680C.c(1879): warning:  #177-D: variable "err"  was declared but never referenced
+      uint8_t err;
+4G\ModuleA7680C.c(1880): warning:  #177-D: variable "count"  was declared but never referenced
+      static uint8_t count = 1;
+compiling APFrame.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+4G\APFrame.c(947): warning:  #174-D: expression has no effect
+          __NOP;
+4G\APFrame.c(969): warning:  #223-D: function "time" declared implicitly
+          APSendB1[GUN_A].ChargeTime = (time(RT_NULL) - stChTcb.stCh.timestart) / 60;		//累计充电时间	单位：min
+4G\APFrame.c(879): warning:  #177-D: variable "laststate"  was declared but never referenced
+      static uint8_t laststate = 2;
+4G\APFrame.c(1057): warning:  #111-D: statement is unreachable
+      return RT_TRUE;
+4G\APFrame.c(1623): warning:  #177-D: variable "i"  was declared but never referenced
+      uint8_t i = 0;
+4G\APFrame.c(1743): warning:  #177-D: variable "Price"  was declared but never referenced
+      uint16_t Price[TIME_PERIOD_MAX];				//电价 	0.01�?
+4G\APFrame.c(1744): warning:  #177-D: variable "CurTimeQuantum"  was declared but never referenced
+      _TIME_QUANTUM CurTimeQuantum[TIME_PERIOD_MAX];		//当前处于哪个时间�?  �? �? �? �?
+4G\APFrame.c(1834): warning:  #188-D: enumerated type mixed with another type
+          APSendBilB53[gun].PricInfo[i].CurTimeQuantum = CurQuan;  //当前处于哪个时间�?
+4G\APFrame.c(1960): warning:  #188-D: enumerated type mixed with another type
+          APSendBilB53[gun].PricInfo[i].CurTimeQuantum = CurQuan;  //当前处于哪个时间�?
+4G\APFrame.c(2237): warning:  #940-D: missing return statement at end of non-void function "AP_RegisteeAck" 
+  }
+4G\APFrame.c(2520): warning:  #177-D: variable "Vinstate"  was declared but never referenced
+      static uint8_t Vinstate = 0; //0失败 1成功
+4G\APFrame.c(493): warning:  #177-D: function "AP_RecvCardB9"  was declared but never referenced
+  static uint8_t   AP_RecvCardB9(uint8_t *pdata,uint16_t len);
+compiling 4GRecv.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+4G\4GRecv.c(69): warning:  #177-D: variable "err"  was declared but never referenced
+      uint8_t err,i;
+compiling ZFFrame.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+4G\ZFFrame.c(76): warning:  #940-D: missing return statement at end of non-void function "ZF_SendFrameDispose" 
+  }
+4G\ZFFrame.c(112): warning:  #940-D: missing return statement at end of non-void function "ZF_SendRegister" 
+  }
+4G\ZFFrame.c(148): warning:  #940-D: missing return statement at end of non-void function "ZF_SendHear" 
+  }
+4G\ZFFrame.c(245): warning:  #940-D: missing return statement at end of non-void function "ZF_SendDevState" 
+  }
+4G\ZFFrame.c(273): warning:  #940-D: missing return statement at end of non-void function "ZF_SendStartCharge" 
+  }
+4G\ZFFrame.c(373): warning:  #940-D: missing return statement at end of non-void function "ZF_SendBill" 
+  }
+compiling ch_in_io.c...
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+charge_pro\ch_in_io.c(182): warning:  #1215-D: #warning directive: "YXY"
+  #warning "YXY"
+charge_pro\ch_in_io.c(70): warning:  #177-D: variable "stAmmFault"  was declared but never referenced
+  static _AMM_FAULT  stAmmFault = {0};
+charge_pro\ch_in_io.c(83): warning:  #177-D: function "send_msg_to_ch"  was declared but never referenced
+  static void send_msg_to_ch(uint8_t ucMsgCode,uint8_t ucData)
+charge_pro\ch_in_io.c: 4 warnings, 0 errors
+compiling chtask.c...
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+charge_pro\chtask.c(138): warning:  #223-D: function "time" declared implicitly
+              stChTcb.stCh.timestart = time(RT_NULL);
+charge_pro\chtask.c(235): warning:  #223-D: function "time" declared implicitly
+          uiTimeTest  = time(RT_NULL);
+charge_pro\chtask.c: 3 warnings, 0 errors
+compiling chproc.c...
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+charge_pro\chproc.c(444): warning:  #223-D: function "time" declared implicitly
+      pstChTcb->stCh.timestart = time(RT_NULL);
+charge_pro\chproc.c(586): warning:  #223-D: function "time" declared implicitly
+      ch_systime=time(RT_NULL);  //获取当前的时�?
+charge_pro\chproc.c(727): warning:  #223-D: function "time" declared implicitly
+      tTime  = time(RT_NULL);    /* 前面的time(RT_NULL)获取的时间就为当前屏幕上面的时间 */
+charge_pro\chproc.c(838): warning:  #167-D: argument of type "__packed uint32_t *" is incompatible with parameter of type "uint32_t *"
+          get_q_money(uiDE,pstChTcb->stCh.uiaChargeEnergy,pstChTcb->stCh.uifwChargeEnergy,pstChTcb->stCh.uifsChargeEnergy,pstChTcb->stCh.uifsfwChargeEnergy);
+charge_pro\chproc.c(838): warning:  #167-D: argument of type "__packed uint32_t *" is incompatible with parameter of type "uint32_t *"
+          get_q_money(uiDE,pstChTcb->stCh.uiaChargeEnergy,pstChTcb->stCh.uifwChargeEnergy,pstChTcb->stCh.uifsChargeEnergy,pstChTcb->stCh.uifsfwChargeEnergy);
+charge_pro\chproc.c(838): warning:  #167-D: argument of type "__packed uint32_t *" is incompatible with parameter of type "uint32_t *"
+          get_q_money(uiDE,pstChTcb->stCh.uiaChargeEnergy,pstChTcb->stCh.uifwChargeEnergy,pstChTcb->stCh.uifsChargeEnergy,pstChTcb->stCh.uifsfwChargeEnergy);
+charge_pro\chproc.c(838): warning:  #167-D: argument of type "__packed uint32_t *" is incompatible with parameter of type "uint32_t *"
+          get_q_money(uiDE,pstChTcb->stCh.uiaChargeEnergy,pstChTcb->stCh.uifwChargeEnergy,pstChTcb->stCh.uifsChargeEnergy,pstChTcb->stCh.uifsfwChargeEnergy);
+charge_pro\chproc.c(819): warning:  #177-D: variable "uiTime"  was declared but never referenced
+      uint32_t  uiTime  = 0;
+charge_pro\chproc.c(855): warning:  #177-D: variable "ucGunState"  was declared but never referenced
+      uint8_t ucGunState = 0;
+charge_pro\chproc.c: 13 warnings, 0 errors
+compiling ch_port.c...
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+charge_pro\ch_port.c: 1 warning, 0 errors
+compiling showmem.c...
+compiling mq_service.c...
+compiling div0.c...
+compiling cp.c...
+compiling backtrace.c...
+compiling rn8209.c...
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+charge_pro\rn8209.c: 1 warning, 0 errors
+compiling cpuport.c...
+assembling context_rvds.S...
+compiling i2c_core.c...
+compiling i2c_dev.c...
+compiling pin.c...
+compiling adc.c...
+compiling rt_drv_pwm.c...
+compiling mtd_nor.c...
+compiling rtc.c...
+..\..\components\drivers\rtc\rtc.c(124): warning:  #223-D: function "time" declared implicitly
+      now = time(RT_NULL);
+..\..\components\drivers\rtc\rtc.c(166): warning:  #223-D: function "time" declared implicitly
+      now = time(RT_NULL);
+..\..\components\drivers\rtc\rtc.c(202): warning:  #223-D: function "time" declared implicitly
+          now = time(RT_NULL);
+..\..\components\drivers\rtc\rtc.c: 3 warnings, 0 errors
+compiling serial.c...
+compiling sfud.c...
+compiling sfud_sfdp.c...
+compiling spi_core.c...
+compiling spi_dev.c...
+compiling completion.c...
+compiling spi_flash_sfud.c...
+compiling ringblk_buf.c...
+compiling waitqueue.c...
+compiling dataqueue.c...
+compiling pipe.c...
+compiling dlt645_1997.c...
+compiling workqueue.c...
+compiling ringbuffer.c...
+compiling dlt645.c...
+compiling dlt645_2007.c...
+compiling dlt645_data.c...
+compiling dlt645_port.c...
+compiling drv_gpio.c...
+compiling drv_spi.c...
+compiling drv_spi_flash.c...
+compiling drv_usart.c...
+compiling drv_i2c.c...
+compiling drv_rtc.c...
+compiling board.c...
+compiling ef_env_legacy_wl.c...
+compiling ef_log.c...
+compiling MenuDisp .c...
+compiling DispShowStatus.c...
+compiling DispkeyFunction.c...
+compiling easyflash.c...
+compiling ef_iap.c...
+compiling ef_cmd.c...
+compiling DwinProtocol.c...
+dwin\DwinProtocol.c(202): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if((num < 0) || (num >100000))
+dwin\DwinProtocol.c: 1 warning, 0 errors
+compiling Dispkey.c...
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+dwin\Dispkey.c: 4 warnings, 0 errors
+compiling ef_env.c...
+compiling ef_utils.c...
+compiling ef_env_legacy.c...
+compiling ef_fal_port.c...
+compiling dwin_com_pro.c...
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+dwin\dwin_com_pro.c(467): warning:  #177-D: variable "recorddisplay"  was declared but never referenced
+      _Record_displayinfo recorddisplay;
+dwin\dwin_com_pro.c(1011): warning:  #940-D: missing return statement at end of non-void function "Munu13_ShowSysInfo" 
+  }
+dwin\dwin_com_pro.c(1216): warning:  #1215-D: #warning directive: "汇誉管理员密码临时固�?
+  #warning"汇誉管理员密码临时固�?"
+dwin\dwin_com_pro.c(1213): warning:  #177-D: variable "i"  was declared but never referenced
+      uint8_t i;
+dwin\dwin_com_pro.c(1344): warning:  #177-D: variable "i"  was declared but never referenced
+      uint8_t i;
+dwin\dwin_com_pro.c(1567): warning:  #223-D: function "time" declared implicitly
+      stChTcb.stCh.Reservetime = time(RT_NULL); //记录开始预约充电时的时间（�?1970年秒数）
+dwin\dwin_com_pro.c(2134): warning:  #177-D: variable "chargepwer"  was declared but never referenced
+      uint16_t chargepwer;
+dwin\dwin_com_pro.c(2266): warning:  #940-D: missing return statement at end of non-void function "Disp_show_windup" 
+  }
+dwin\dwin_com_pro.c(2312): warning:  #1215-D: #warning directive: 测试记录查询页面
+      /* 记录查询界面 */ #warning 测试记录查询页面
+dwin\dwin_com_pro.c(2446): warning:  #223-D: function "time" declared implicitly
+          curtick = time(RT_NULL);
+dwin\dwin_com_pro.c(2380): warning:  #177-D: variable "updata_curpage"  was declared but never referenced
+      uint8_t updata_curpage;
+dwin\dwin_com_pro.c(2383): warning:  #177-D: variable "laststate"  was declared but never referenced
+      static uint8_t laststate = 0;
+dwin\dwin_com_pro.c(2815): warning:  #188-D: enumerated type mixed with another type
+                      stChTcb.stCh.reason = stMsg.uiMsgVar;		//停止原因
+dwin\dwin_com_pro.c(2837): warning:  #223-D: function "time" declared implicitly
+                      stChTcb.stCh.timestop = time(RT_NULL);
+dwin\dwin_com_pro.c(2838): warning:  #188-D: enumerated type mixed with another type
+                      stChTcb.stCh.reason = stMsg.uiMsgVar;		//停止原因
+dwin\dwin_com_pro.c(2719): warning:  #177-D: variable "uwRet"  was declared but never referenced
+      rt_err_t uwRet = RT_EOK;
+dwin\dwin_com_pro.c(75): warning:  #177-D: variable "dwin_uart_mq"  was declared but never referenced
+  static rt_mq_t dwin_uart_mq = RT_NULL;   //消息队列
+dwin\dwin_com_pro.c: 21 warnings, 0 errors
+compiling fal_flash.c...
+compiling fal_flash_sfud_port.c...
+compiling shell.c...
+compiling fal_partition.c...
+compiling fal_flash_gd32f10x_port.c...
+compiling fal.c...
+compiling fal_rtt.c...
+compiling msh.c...
+compiling cmd.c...
+compiling timer.c...
+compiling thread.c...
+compiling mem.c...
+compiling kservice.c...
+compiling irq.c...
+compiling object.c...
+compiling ipc.c...
+compiling scheduler.c...
+compiling clock.c...
+compiling device.c...
+compiling mempool.c...
+compiling components.c...
+compiling idle.c...
+compiling mem_std.c...
+compiling libc.c...
+compiling syscalls.c...
+compiling stdlib.c...
+assembling startup_gd32f10x_xd.s...
+compiling time.c...
+compiling gd32f10x_exti.c...
+compiling gd32f10x_usart.c...
+compiling gd32f10x_fmc.c...
+compiling gd32f10x_rtc.c...
+compiling gd32f10x_crc.c...
+compiling gd32f10x_enet.c...
+compiling gd32f10x_exmc.c...
+compiling gd32f10x_dbg.c...
+compiling system_gd32f10x.c...
+compiling gd32f10x_fwdgt.c...
+compiling gd32f10x_misc.c...
+compiling gd32f10x_adc.c...
+compiling gd32f10x_bkp.c...
+compiling gd32f10x_i2c.c...
+compiling gd32f10x_pmu.c...
+compiling gd32f10x_dma.c...
+compiling gd32f10x_gpio.c...
+compiling gd32f10x_sdio.c...
+compiling gd32f10x_dac.c...
+compiling gd32f10x_wwdgt.c...
+compiling gd32f10x_spi.c...
+compiling gd32f10x_can.c...
+compiling gd32f10x_timer.c...
+compiling gd32f10x_rcu.c...
+compiling fix_brickeduid.c...
+compiling dunp_info.c...
+compiling firmware_check.c...
+compiling mifare_classic_value_block.c...
+compiling change_uid.c...
+packages\rc522-latest\examples\change_uid.c(17): warning:  #550-D: variable "key"  was set but never used
+  static MIFARE_Key key;
+packages\rc522-latest\examples\change_uid.c: 1 warning, 0 errors
+compiling timestamp.c...
+compiling mfrc522.c...
+compiling example_agile_led.c...
+compiling agile_led.c...
+compiling read_nuid.c...
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+4G\4GMain.h(294): warning:  #1295-D: Deprecated declaration _4G_SendFrameDispose - give arg types
+  uint8_t  _4G_SendFrameDispose();
+4G\4GMain.h(350): warning:  #1295-D: Deprecated declaration SIM7600Reset - give arg types
+  uint8_t SIM7600Reset();
+4G\4GMain.h(372): warning:  #1295-D: Deprecated declaration APP_GetSIM7600Status - give arg types
+  _4G_STATE APP_GetSIM7600Status();
+packages\rc522-latest\examples\read_nuid.c(129): warning:  #167-D: argument of type "MIFARE_Key_card *" is incompatible with parameter of type "MIFARE_Key *"
+      status = PCD_Authenticate(PICC_CMD_MF_AUTH_KEY_A, 7, &keycard, uid);
+packages\rc522-latest\examples\read_nuid.c(154): warning:  #167-D: argument of type "MIFARE_Key_card *" is incompatible with parameter of type "MIFARE_Key *"
+      status = PCD_Authenticate(PICC_CMD_MF_AUTH_KEY_A, 11, &keycard, uid);
+packages\rc522-latest\examples\read_nuid.c(167): warning:  #167-D: argument of type "MIFARE_Key_card *" is incompatible with parameter of type "MIFARE_Key *"
+      status = PCD_Authenticate(PICC_CMD_MF_AUTH_KEY_A, 15, &keycard, uid);
+packages\rc522-latest\examples\read_nuid.c(240): warning:  #111-D: statement is unreachable
+      return 0;
+packages\rc522-latest\examples\read_nuid.c(260): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(267): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(292): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(299): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(305): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(286): warning:  #177-D: variable "size"  was declared but never referenced
+      uint8_t size = sizeof(buffer);
+packages\rc522-latest\examples\read_nuid.c(333): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(340): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(370): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(376): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(391): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(398): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(419): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(425): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(441): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(448): warning:  #188-D: enumerated type mixed with another type
+          rt_kprintf("%s\n", GetStatusCodeName(status));
+packages\rc522-latest\examples\read_nuid.c(467): warning:  #1215-D: #warning directive: hycsh "下面是读出MCUID和设置ID�?
+  #warning hycsh "下面是读出MCUID和设置ID�?"
+packages\rc522-latest\examples\read_nuid.c(706): warning:  #174-D: expression has no effect
+                      __NOP;
+packages\rc522-latest\examples\read_nuid.c(964): warning:  #940-D: missing return statement at end of non-void function "show_Notcalculated" 
+  }
+packages\rc522-latest\examples\read_nuid.c(975): warning:  #940-D: missing return statement at end of non-void function "mode5" 
+  }
+packages\rc522-latest\examples\read_nuid.c(1261): warning:  #111-D: statement is unreachable
+      PCD_End();
+packages\rc522-latest\examples\read_nuid.c: 29 warnings, 0 errors
+compiling mfrc522_rtt_stm32_port.c...
+compiling crc.c...
+compiling user_lib.c...
+compiling led_thread.c...
+charge_pro\chtask.h(42): warning:  #1215-D: #warning directive: "YXY 临时修改电流"
+  #warning "YXY 临时修改电流"
+packages\agile_led-latest\src\led_thread.c(29): warning:  #177-D: variable "_led1_blue_run"  was declared but never referenced
+  static agile_led_t *_led1_blue_run = RT_NULL;
+packages\agile_led-latest\src\led_thread.c(30): warning:  #177-D: variable "_led2_red_fault"  was declared but never referenced
+  static agile_led_t *_led2_red_fault = RT_NULL;
+packages\agile_led-latest\src\led_thread.c(31): warning:  #177-D: variable "_led3_green_charging"  was declared but never referenced
+  static agile_led_t *_led3_green_charging = RT_NULL;
+packages\agile_led-latest\src\led_thread.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=149108 RO-data=17720 RW-data=3240 ZI-data=32840  
+FromELF: creating hex file...
+After Build - User command #2: fromelf --bin -o "E:\360MoveData\Users\HZHY\Desktop\AC1g-DA\gd32f103vgt6_231106-1439\bsp\gd32103vgt6\output\Project.bin" "E:\360MoveData\Users\HZHY\Desktop\AC1g-DA\gd32f103vgt6_231106-1439\bsp\gd32103vgt6\output\Project.axf"
+".\output\Project.axf" - 0 Error(s), 171 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: GigaDevice
+                http://www.keil.com/pack/GigaDevice.GD32F10x_DFP.2.0.1.pack
+                GigaDevice.GD32F10x_DFP.2.0.1
+                GigaDevice GD32F10x Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:\keil\GigaDevice\GD32F10x_DFP\2.0.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:11
+</pre>
+</body>
+</html>
